@@ -63,7 +63,7 @@ namespace BTCPayServer.Configuration
             Logs.Configuration.LogInformation("Network: " + NetworkType.ToString());
 
             if (conf.GetOrDefault<bool>("launchsettings", false) && NetworkType != ChainName.Regtest)
-                throw new ConfigException($"You need to run BTCPayServer with the run.sh or run.ps1 script");
+                throw new ConfigException($"You need to run ZEUSPay with the run.sh or run.ps1 script");
 
 
 
@@ -144,7 +144,7 @@ namespace BTCPayServer.Configuration
             }
 
             DisableRegistration = conf.GetOrDefault<bool>("disable-registration", true);
-            PluginRemote = conf.GetOrDefault("plugin-remote", "btcpayserver/btcpayserver-plugins");
+            PluginRemote = conf.GetOrDefault("plugin-remote", "zeuspayments/btcpayserver-plugins");
             RecommendedPlugins = conf.GetOrDefault("recommended-plugins", "").ToLowerInvariant().Split('\r', '\n', '\t', ' ').Where(s => !string.IsNullOrEmpty(s)).Distinct().ToArray();
             CheatMode = conf.GetOrDefault("cheatmode", false);
             if (CheatMode && this.NetworkType == ChainName.Mainnet)

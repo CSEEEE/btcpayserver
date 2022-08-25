@@ -24,7 +24,7 @@ namespace BTCPayServer.Abstractions.Contracts
             public string Condition { get; set; }
             public override string ToString()
             {
-                return $"{Identifier}: {Condition}";
+                return $"ZEUSPay: {Condition}";
             }
         }
     }

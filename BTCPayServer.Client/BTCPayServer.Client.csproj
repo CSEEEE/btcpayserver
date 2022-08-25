@@ -3,14 +3,14 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <LangVersion>10.0</LangVersion>
-        <Company>BTCPay Server</Company>
-        <Copyright>Copyright © BTCPay Server 2020</Copyright>
-        <Description>A client library for BTCPay Server Greenfield API</Description>
+        <Company>ZEUSPay</Company>
+        <Copyright>Copyright © ZEUSPay 2022</Copyright>
+        <Description>A client library for ZEUSPay Greenfield API</Description>
         <PackageIcon>icon.png</PackageIcon>
-        <PackageTags>btcpay,btcpayserver</PackageTags>
-        <PackageProjectUrl>https://github.com/btcpayserver/btcpayserver/tree/master/BTCPayServer.Client</PackageProjectUrl>
+        <PackageTags>btcpay,btcpayserver,zeus,zeuspay</PackageTags>
+        <PackageProjectUrl>https://github.com/zeuspayments/btcpayserver/tree/zeuspay/BTCPayServer.Client</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/btcpayserver/btcpayserver</RepositoryUrl>
+        <RepositoryUrl>https://github.com/zeuspayments/btcpayserver</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
   <PropertyGroup>
