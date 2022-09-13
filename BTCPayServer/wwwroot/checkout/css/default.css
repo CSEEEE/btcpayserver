@@ -78,7 +78,7 @@ h1 {
 }
 
 mark {
-    background-color: #ff0;
+    background-color: rgb(64, 255, 0);
     color: #000;
 }
 
@@ -329,9 +329,11 @@ body {
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #fff;
     margin: 0;
-    background: #f8f9fa;
+    background: url(https://media.giphy.com/media/xSvnDdn1TGEgkKutCB/giphy.gif);
+    background-blend-mode: soft-light;
+    background-size: 120px;
+    background-color: #03030300;
 }
 
 [tabindex="-1"]:focus {
@@ -553,7 +555,7 @@ output {
     }
 
     .btn:active, .action-button:active, .btn.active, .active.action-button {
-        background-image: none;
+    	background-color: rgba(0, 255, 42, 0.85);
         outline: 0;
     }
 
@@ -1194,9 +1196,10 @@ input[type="button"].action-button {
     position: relative;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem;
     outline: 0;
+    box-shadow: 0 2px 32px 0 black;
+    border: 2px solid white;
 }
 
 .modal-backdrop {
@@ -3777,7 +3780,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     }
 
     .btn:active, .action-button:active, .btn.active, .active.action-button {
-        background-image: none;
+    	background-color: rgba(251, 255, 0, 0.85);
         outline: 0;
     }
 
@@ -6803,9 +6806,13 @@ button.close {
 }
 
     .modal-header::after {
-        content: "";
         display: table;
-        clear: both;
+    	margin: 5px 0 0 0;
+    	content: "⚡";
+    	text-shadow: 1px 1px black;
+    	font-size: 1.6em;
+    	position: absolute;
+    	right: 10px;
     }
 
     .modal-header .close {
@@ -8098,8 +8105,6 @@ a:hover {
 
 .action-button {
     color: #fff;
-    background-color: #51b13e;
-    border-color: #51b13e;
     padding: 12px;
     word-break: normal;
     font-size: 13px;
@@ -8110,6 +8115,8 @@ a:hover {
     width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
+    background-color: rgba(251, 255, 0, 0.85);
+    border-color: #fbff00;
 }
 
     .action-button:hover {
@@ -8127,7 +8134,7 @@ a:hover {
     .action-button:active, .action-button.active,
     .open > .action-button.dropdown-toggle {
         color: #fff;
-        background-color: #418e32;
+    	background-color: rgba(251, 255, 0, 0.85);
         border-color: #418e32;
         background-image: none;
     }
@@ -8188,7 +8195,7 @@ strong {
     text-align: center;
     font-size: 13px;
     padding: 20px 20px;
-    color: #515664;
+    color: #101010;
     font-weight: 300;
 }
 
@@ -8227,10 +8234,10 @@ strong {
 }
 
 .top-header {
-    color: #000;
-    background-color: #fff;
     font-weight: 500;
     letter-spacing: .5px;
+    color: rgb(0, 0, 0);
+    background: transparent;
 }
 
 @media (min-width: 576px) {
@@ -8242,6 +8249,9 @@ strong {
 
 .top-header .header {
     display: flex;
+    background: black;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 1px;
 }
 
 .top-header .header__icon {
@@ -8250,8 +8260,8 @@ strong {
     position: relative;
     width: 100px;
     height: 50px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 0 !important;
+    padding-top: 5px;
 }
 
 /* centering for new default design */
@@ -8277,7 +8287,7 @@ strong {
 /* eof */
 
 .top-header .timer-row {
-    background: #51b13e;
+    background: #2bff00;
     color: #fff;
     display: flex;
     align-items: center;
@@ -8285,6 +8295,7 @@ strong {
     font-size: 13px;
     position: relative;
     transition: background 1s ease;
+    text-shadow: 1px 1px black;
 }
 
     .top-header .timer-row.expiring-soon {
@@ -8313,7 +8324,7 @@ strong {
     .top-header .timer-row__spinner svg {
         width: 17px;
         height: 17px;
-        fill: #fff;
+    	fill: #fbff00;
         animation: spin 0.5s linear infinite;
         margin-top: -2px;
         transition: fill .5s ease;
@@ -8451,8 +8462,9 @@ strong {
     .buyerTotalLine .fa-angle-double-up {
         display: none;
         position: absolute;
-        bottom: 0px;
         left: 49%;
+    	padding-bottom: 3px;
+    	opacity: .5;
     }
 
     .buyerTotalLine.expanded .fa-angle-double-up {
@@ -8496,13 +8508,14 @@ strong {
     outline: none;
     letter-spacing: .8px;
     cursor: pointer;
+    color: #444 !important;
 }
 
     .payment-tabs__tab.active {
-        background: #f5f5f5;
+    	background: rgba(255, 255, 255, .25);
         font-weight: 400;
         transition: all .2s ease;
-        border-bottom: #51b13e 3px solid
+        border-bottom: #2eff04 3px solid
     }
 
 
@@ -8518,7 +8531,12 @@ strong {
 }
 
 .manual__step-two__instructions {
-    padding: 15px 10px 30px;
+    padding: 15px 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    opacity: 1;
+    background: rgba(255, 255, 255, .8);
+    color: #101010;
 }
 
     .manual__step-two__instructions.compress {
@@ -8956,6 +8974,10 @@ strong {
     margin-bottom: 1.5rem !important;
     margin-bottom: 0 !important;
     min-height: 393px;
+    background: url(https://media.giphy.com/media/xSvnDdn1TGEgkKutCB/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 5px 5px;
 }
 
     .payment-box.with-recommended-fee {
@@ -9022,6 +9044,11 @@ strong {
     position: absolute;
     right: 0px;
     display: none;
+    z-index: 100;
+    top: -40px;
+    right: -50px;
+    color: red;
+    font-size: 2em;
 }
 
     .close-icon img {
@@ -9157,6 +9184,14 @@ strong {
     padding: 1em 30px;
 }
 
+    .bp-view#paid {
+        padding-bottom: 0;
+    }
+
+        .bp-view#paid.pad {
+            padding-bottom: 30px;
+        }
+
     .bp-view.enter-contact-email {
         padding-left: 40px;
         padding-right: 40px;
@@ -9183,11 +9218,14 @@ strong {
     .bp-view.paid-full {
         padding-top: 30px;
         padding-bottom: 0;
+    	background: url(https://media.giphy.com/media/13USt1URETlUFG/giphy.gif);
     }
 
         .bp-view.paid-full .success-message {
-            padding-top: 27px;
-            padding-bottom: 40px;
+            	padding-top: 27px;
+            	padding-bottom: 40px;
+    		color: white;
+    		background: hsla(0, 0, 0, .4);
         }
 
 .recommended-fee {
@@ -9327,6 +9365,7 @@ strong {
     color: #000;
     font-size: 0px;
     width: 100%;
+    background: none;
 }
 
     .btnGroupLnd button:first-child {
@@ -9342,8 +9381,7 @@ strong {
 
     .btnGroupLnd button {
         display: table-cell;
-        border: solid 1px #51b13e;
-        background-color: #fff;
+        border: solid 1px;
         padding: 6px 9px;
         margin: 0px;
         font-size: 12px;
@@ -9352,6 +9390,9 @@ strong {
         overflow: hidden;
         white-space: nowrap;
         transition: all .2s ease-in-out;
+    	border-color: #fbff00 !important;
+    	color: rgba(255, 255, 255, .8);
+    	background-color: rgba(251, 255, 0, 0.61);
     }
 
         .btnGroupLnd button:hover {
@@ -9403,6 +9444,7 @@ strong {
     .payment__scan svg {
         width: 256px;
         height: 256px;
+   	box-shadow: 0 0 0 5px rgba(255, 255, 255, .85);
     }
 
 .payment__scan__checkmark-wrapper {
@@ -9557,8 +9599,10 @@ strong {
 }
 
 .expired__body {
-    padding: 0px 8px 0px;
-    margin-top: -10px;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
 .expired__header {
@@ -10339,7 +10383,7 @@ All mobile class names should be prefixed by m- */
 .confirm-contact-email .payment-tabs__slider,
 .link-expired .payment-tabs__slider,
 .wrong-email .payment-tabs__slider {
-    display: none;
+     background-color: #444;
 }
 
 .confirm-contact-email .payment-box {
@@ -11303,7 +11347,8 @@ low-fee-timeline {
     position: relative;
     border-radius: 5px;
     border: 1px solid #e0e0e0;
-    background: #fff;
+    background: rgba(255, 255, 255, .8);
+    color: #101010;
 }
 
 .copySectionBox {
@@ -11333,7 +11378,7 @@ low-fee-timeline {
     transform: rotateZ(45deg);
     margin-left: -5px;
     top: -5px;
-    background: #51b13e;
+    background: #4a4a4a;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     margin-bottom: -10px;
@@ -11455,12 +11500,12 @@ low-fee-timeline {
 .powered__by__btcpayserver {
     margin-top: 10px;
     text-align: center;
-    color: #818a91;
+    color: #a9a9a9 !important;
     font-size: small;
 }
 
     .powered__by__btcpayserver a {
-        color: #51b13e;
+        color: #a9a9a9 !important;
     }
 
         .powered__by__btcpayserver a:hover {

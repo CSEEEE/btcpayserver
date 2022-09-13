@@ -16,13 +16,13 @@ window.BTCPayShopifyIntegrationModule = function () {
     }
 
     if (!window.btcpay) {
-        throw new Error("The BTCPay modal js was not loaded on this page.");
+        throw new Error("The ZEUSPay modal js was not loaded on this page.");
     }
     if (!window.Shopify) {
         throw new Error("The Shopify global object was not loaded on this page.");
     }
     if (!window.BTCPAYSERVER_URL || !window.STORE_ID) {
-        throw new Error("The BTCPAYSERVER_URL STORE_ID global vars were not set on this page.");
+        throw new Error("The ZEUSPAY_URL STORE_ID global vars were not set on this page.");
     }
     const shopify_order_id = Shopify.checkout.order_id;
     const btcPayServerUrl = window.BTCPAYSERVER_URL;
@@ -78,7 +78,7 @@ window.BTCPayShopifyIntegrationModule = function () {
                 return response.json();
             }).catch(function () {
                 if (!backgroundCheck)
-                    alert("Could not initiate BTCPay Server payment method, try again later.");
+                    alert("Could not initiate ZEUSPay payment method, try again later.");
             })
     }
 
@@ -155,7 +155,7 @@ window.BTCPayShopifyIntegrationModule = function () {
         insertElement(buttonElement, pageItems.orderConfirmed);
     }
 
-    if (["bitcoin", "btc", "btcpayserver", "btcpay server"].filter(value => pageItems.paymentMethod.innerText.toLowerCase().indexOf(value) !== -1).length === 0) {
+    if (["bitcoin", "btc", "btcpayserver", "btcpay server", "zeuspay", "zeus"].filter(value => pageItems.paymentMethod.innerText.toLowerCase().indexOf(value) !== -1).length === 0) {
         return;
     }
     showPaymentInstructions();

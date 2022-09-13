@@ -14,7 +14,7 @@ namespace BTCPayServer.Plugins.Shopify
             _client = client;
         }
 
-        private static string[] _keywords = new[] { "bitcoin", "btc", "btcpayserver", "btcpay server" };
+        private static string[] _keywords = new[] { "bitcoin", "btc", "btcpayserver", "btcpay server", "zeuspay", "zeus" };
         public async Task<TransactionsCreateResp> Process(string orderId, string invoiceId, string currency, string amountCaptured, bool success)
         {
             currency = currency.ToUpperInvariant().Trim();
@@ -74,7 +74,7 @@ namespace BTCPayServer.Plugins.Shopify
                     currency = currency,
                     amount = amountCaptured,
                     kind = kind,
-                    gateway = "BTCPayServer",
+                    gateway = "ZEUSPay",
                     source = "external",
                     authorization = invoiceId,
                     status = status

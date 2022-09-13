@@ -20,7 +20,7 @@ namespace BTCPayServer.Services.Notifications.Blobs
             protected override void FillViewModel(NewVersionNotification notification, NotificationViewModel vm)
             {
                 vm.Body = $"New version {notification.Version} released!";
-                vm.ActionLink = $"https://github.com/btcpayserver/btcpayserver/releases/tag/v{notification.Version}";
+                vm.ActionLink = $"https://github.com/zeuspayments/btcpayserver/releases/tag/v{notification.Version}";
             }
         }
         public NewVersionNotification()

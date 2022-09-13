@@ -34,7 +34,7 @@ namespace BTCPayServer.Plugins
         {
             LoadedPlugins = btcPayServerPlugins;
             _githubClient = httpClientFactory.CreateClient();
-            _githubClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("btcpayserver", "1"));
+            _githubClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("zeuspayments", "1"));
             _settingsRepository = settingsRepository;
             _btcPayServerOptions = btcPayServerOptions;
             _dataDirectories = dataDirectories;
@@ -55,7 +55,7 @@ namespace BTCPayServer.Plugins
 
         public async Task<AvailablePlugin[]> GetRemotePlugins()
         {
-            var resp = await CallHttpAndCache($"https://api.github.com/repos/{_btcPayServerOptions.PluginRemote}/git/trees/master?recursive=1");
+            var resp = await CallHttpAndCache($"https://api.github.com/repos/zeuspayments/btcpayserver-plugins/git/trees/master?recursive=1");
 
             var respObj = JObject.Parse(resp)["tree"] as JArray;
 
@@ -80,7 +80,7 @@ namespace BTCPayServer.Plugins
                         var content = Encoders.Base64.DecodeData(d["content"].Value<string>());
 
                         var r = JsonConvert.DeserializeObject<AvailablePlugin>(Encoding.UTF8.GetString(content));
-                        r.Path = $"https://raw.githubusercontent.com/{_btcPayServerOptions.PluginRemote}/master/{pluginName}";
+                        r.Path = $"https://raw.githubusercontent.com/zeuspayments/btcpayserver-plugins/master/{pluginName}";
                         return r;
                     }, TaskScheduler.Current));
                 

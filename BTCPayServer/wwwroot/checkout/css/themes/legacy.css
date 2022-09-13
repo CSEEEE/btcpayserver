@@ -8153,9 +8153,9 @@ a:hover {
 }
 
 .action-button {
-    color: #fff;
-    background-color: #329F80;
-    border-color: #329F80;
+    color: rgb(0, 0, 0);
+    background-color: #e5ff00;
+    border-color: #def700;
     padding: 15px;
     word-break: normal;
     font-size: 13.5px;
@@ -8169,22 +8169,22 @@ a:hover {
 }
 
     .action-button:hover {
-        color: #fff;
-        background-color: #24725B;
-        border-color: #24725B;
+        color: rgb(0, 0, 0);
+        background-color: #e6fa2f;
+        border-color: #6a7224;
     }
 
     .action-button:focus, .action-button.focus {
-        color: #fff;
-        background-color: #24725B;
-        border-color: #24725B;
+        color: rgb(0, 0, 0);
+        background-color: #e5ff00;
+        border-color: #e5ff00;
     }
 
     .action-button:active, .action-button.active,
     .open > .action-button.dropdown-toggle {
-        color: #fff;
-        background-color: #24725B;
-        border-color: #24725B;
+        color: rgb(0, 0, 0);
+        background-color: #e5ff00;
+        border-color: #e5ff00;
         background-image: none;
     }
 
@@ -8192,9 +8192,9 @@ a:hover {
         .open > .action-button.dropdown-toggle:hover,
         .open > .action-button.dropdown-toggle:focus,
         .open > .action-button.dropdown-toggle.focus {
-            color: #fff;
-            background-color: #24725B;
-            border-color: #24725B;
+            color: rgb(0, 0, 0);
+            background-color: #e5ff00;
+            border-color: #e5ff00;
         }
 
     .action-button.disabled:focus, .action-button.disabled.focus, .action-button:disabled:focus, .action-button:disabled.focus {
@@ -8208,8 +8208,8 @@ a:hover {
     }
 
     .action-button:hover {
-        background-color: #24725B;
-        border-color: rgba(28, 100, 222, 0);
+        background-color: #e5ff00;
+        border-color: rgba(251, 255, 0, 0);
         opacity: .95;
     }
 
@@ -8284,8 +8284,8 @@ strong {
 }
 
 .top-header {
-    color: #fff;
-    background-color: #329F80;
+    color: rgb(0, 0, 0);
+    background-color: #e5ff00;
     font-weight: 500;
     letter-spacing: .5px;
 }
@@ -8334,7 +8334,7 @@ strong {
 /* eof */
 
 .top-header .timer-row {
-    background: #CEDC21;
+    background: #eeff00;
     display: flex;
     align-items: center;
     padding: 3px 14px;
@@ -8359,7 +8359,7 @@ strong {
     .top-header .timer-row__spinner svg {
         width: 17px;
         height: 17px;
-        fill: #4681e2;
+        fill: #00ff15;
         animation: spin 0.5s linear infinite;
         margin-top: -2px;
         transition: fill .5s ease;
@@ -8559,7 +8559,7 @@ strong {
         color: #214497;
         font-weight: 400;
 
-        border-bottom: #329F80 5px solid;
+        border-bottom: #e5ff00 5px solid;
     }
     
 
@@ -9210,6 +9210,14 @@ strong {
     width: 100%;
 }
 
+    .bp-view#paid {
+        padding-bottom: 0;
+    }
+
+        .bp-view#paid.pad {
+            padding-bottom: 30px;
+        }
+
     .bp-view.enter-contact-email {
         padding-left: 40px;
         padding-right: 40px;
@@ -9398,7 +9406,7 @@ strong {
 
     .btnGroupLnd button {
         display: table-cell;
-        border: solid 1px #24725B;
+        border: solid 1px #e5ff00;
         background-color: #fff;
         padding: 6px 9px;
         margin: 0px;
@@ -9415,15 +9423,15 @@ strong {
         }
 
         .btnGroupLnd button.active {
-            background-color: #329F80;
-            border-color: #329F80;
-            color: #fff;
+            background-color: #e5ff00;
+            border-color: #e5ff00;
+            color: rgb(0, 0, 0);
         }
 
             .btnGroupLnd button.active:hover {
-                background-color: #24725B;
-                border-color: #24725B;
-                color: #fff;
+                background-color: #e5ff00;
+                border-color: #e5ff00;
+                color: rgb(0, 0, 0);
             }
 
 .payment__details__instruction__open-wallet {
@@ -9482,7 +9490,7 @@ strong {
     border-radius: 50%;
     height: 154px;
     width: 154px;
-    border: 2px solid #1DB670;
+    border: 2px solid #e5ff00;
 }
 
 .payment__scan__checkmark-wrapper__checkmark {
